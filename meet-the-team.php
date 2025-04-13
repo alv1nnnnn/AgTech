@@ -56,28 +56,28 @@
                 <div class="team-box">
                     <img src="images\trina.png" alt="Trina H.">
                 </div>
-                <p class="team-name">Trina Chariz Hibo</p>
+                <p class="team-name">TRINA CHARIZ B HIBO</p>
                 <p class="team-role">Project Manager</p>
             </div>
             <div class="team-member">
                 <div class="team-box">
                     <img src="images\rachelle.png" alt="Rachelle M.">
                 </div>
-                <p class="team-name">Rachelle Manila.</p>
+                <p class="team-name">RACHELLE ANNE B. MANILA</p>
                 <p class="team-role">Front-end Developer</p>
             </div>
             <div class="team-member">
                 <div class="team-box">
                     <img src="images\hazel.png" alt="Hazel M.">
                 </div>
-                <p class="team-name">Hazel Marqueses</p>
+                <p class="team-name">HAZEL ANNE B. MARQUESES</p>
                 <p class="team-role">Systems Analyst</p>
             </div>
             <div class="team-member">
                 <div class="team-box">
                     <img src="images\alvin.png" alt="Alvin Nario">
                 </div>
-                <p class="team-name">Alvin Nario</p>
+                <p class="team-name">ALVIN NARIO</p>
                 <p class="team-role">Back-end Developer</p>
             </div>
         </div>

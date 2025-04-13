@@ -13,10 +13,19 @@
     <link rel="icon" href="images/AgTech-Logo.ico" type="image/x-icon">
 </head>
 <body>
-    
-<div id="loader-overlay" style="display: none;">
-    <div class="loader" id="loader"></div>
-</div>
+
+<!-- Top Loader Bar -->
+<div id="top-loader" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #198754; /* Bootstrap success green */
+    z-index: 2000;
+    animation: loader-progress 2s ease-in-out infinite;
+    display: none;
+"></div>
     
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="logo" onclick="window.location.href='index.php';" style="cursor: pointer;">
@@ -181,6 +190,20 @@
     </footer>
 
 </body>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const topLoader = document.getElementById('top-loader');
+    topLoader.style.display = 'block';
+});
+
+window.addEventListener('load', function () {
+    const topLoader = document.getElementById('top-loader');
+    setTimeout(() => {
+        topLoader.style.display = 'none';
+    }, 500); // delay to allow smooth transition
+});
+</script>
 
 
 <script>

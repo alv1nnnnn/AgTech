@@ -6,6 +6,21 @@ body {
     overflow-x: hidden;
 }
 
+@keyframes loader-progress {
+    0% {
+      width: 0%;
+      left: 0%;
+    }
+    50% {
+      width: 50%;
+      left: 25%;
+    }
+    100% {
+      width: 100%;
+      left: 0%;
+    }
+  }
+  
 
 .semiccontainer {
     position: relative;
@@ -741,43 +756,38 @@ span{
 .team-container {
     display: flex;
     justify-content: center;
-    gap: 50px;
-}
-
-.team-member {
-    text-align: center;
-    color: #2D4A36;
+    gap: 30px;
 }
 
 .team-box {
-    width: 250px;
+    width: 100% !important;
     height: 300px;
-    background-color: #E0F19C;
+    background-color: #fff;
     border-radius: 5px;
+    border: solid 1px gray;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .team-box img {
-    width: 190px;
+    width: 250px;
     height: 300px; 
-    border-radius: 10px;
     object-fit: cover; 
 }
 
 .team-name {
-    font-weight: bold;
+    font-weight: 800;
     margin-top: 10px;
     color: #2D4A36;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .team-role {
-    font-weight: 300;
+    font-weight: 200;
     color: #2D4A36; 
-    margin-top: -10px;
-    font-size: 1.1rem;
+    margin-top: -20px;
+    font-size: 1rem;
 }
 
 /*footer section*/
