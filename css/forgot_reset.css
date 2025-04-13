@@ -1,0 +1,117 @@
+/* Forgot Password.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background: white;
+}
+
+.forgot-password-container,
+.reset-container {
+    background-color: whitesmoke;
+    border: 2px solid green;
+    border-radius: 10px;
+    padding: 25px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    margin: 10px 0;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.forgot-password-container h2,
+.reset-container h2,
+.forgot-password-container p {
+    color: green;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.forgot-password-form .form-group,
+.reset-password-form .form-group {
+    margin-bottom: 20px;
+}
+
+.forgot-password-form .form-group label,
+.reset-password-form .form-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: green;
+}
+
+.forgot-password-form .form-group select,
+.forgot-password-form .form-group input,
+.reset-password-form .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid green;
+    border-radius: 5px;
+    height: 40px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #72C268;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    height: 40px;
+}
+
+button:hover {
+    background-color: #2D4A36;
+}
+
+.reset-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.back-to-login {
+    color: green;
+    text-decoration: none;
+}
+.back-to-login:hover {
+    text-decoration: underline;
+}
+
+@media  screen and (max-width: 786px){
+    
+    body{
+        max-height: 100%;
+        background-color: whitesmoke;
+    }
+    
+    .forgot-password-container{
+        display: inline;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        border: none;
+        max-height: 100%;
+        border-radius: 0;
+        box-shadow: none;
+    }
+}

@@ -1,0 +1,32 @@
+Terms and Conditions
+Introduction
+Welcome to AgTech, a web application designed to enhance the livestock market by connecting farmers and traders. By accessing or using our service, you agree to comply with and be bound by these Terms and Conditions.
+
+User Accounts
+
+Eligibility: You must be at least 18 years old to create an account.
+Account Responsibility: You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.
+Account Termination: We reserve the right to terminate or suspend your account if you violate any of these Terms.
+Use of the Service
+
+Permitted Use: You may use the service for lawful purposes only.
+Prohibited Activities: You agree not to misuse the service, including but not limited to: engaging in fraudulent activities, posting misleading information, and violating intellectual property rights.
+Content
+
+User Content: You retain ownership of the content you post on the platform. By posting content, you grant AgTech a non-exclusive, royalty-free license to use, reproduce, and distribute your content.
+Prohibited Content: You agree not to post content that is offensive, harmful, or violates any laws.
+Transactions
+
+Responsibility: All transactions conducted through the platform are between the traders and farmers. AgTech is not responsible for the quality, safety, or legality of the livestock products listed.
+Disputes: Any disputes arising from transactions should be resolved between the involved parties. AgTech is not liable for any disputes or issues.
+Privacy
+Your use of the service is also governed by our Privacy Policy, which outlines how we collect, use, and protect your information.
+
+Limitation of Liability
+AgTech is not liable for any direct, indirect, incidental, or consequential damages resulting from your use of the service.
+
+Changes to the Terms
+We reserve the right to modify these Terms at any time. Your continued use of the service constitutes acceptance of the revised Terms.
+
+Contact Information
+For any questions or concerns about these Terms, please contact us at <a href="mailto:agtechteam@gmail.com">agtechteam@gmail.com</a>.

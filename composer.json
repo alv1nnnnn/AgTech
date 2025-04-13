@@ -1,0 +1,9 @@
+{
+    "require": {
+        "twilio/sdk": "^8.3",
+        "phpmailer/phpmailer": "^6.9",
+        "thiagoalessio/tesseract_ocr": "^2.13",
+        "google/cloud-vision": "^1.9",
+        "infobip/infobip-api-php-client": "^5.1"
+    }
+}

@@ -1,0 +1,1429 @@
+/* Global Styles */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #fff;
+    --black: #000;
+    --bg: #e4e9f7;
+    --grey: #999;
+    --dark: #1a1a1a;
+    --light: #e6e6e6;
+    --wrapper: 1000px;
+    --blue: #2D4A36;
+}
+
+body {
+    background-color: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    background-size: cover;
+    background-repeat: none;
+    overflow: hidden;
+}
+
+.wrapper {
+    position: relative;
+    left: 50.5%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, 0);
+}
+
+.container {
+    position: relative;
+    top: 46.5%;
+    left: 49.5%;
+    width: 100%;
+    height: 93.5%;
+    background-color: var(--white);
+    transform: translate(-50%, -50%);
+}
+
+.container .left {
+    position: relative;
+    float: left;
+    width: 37.6%;
+    height: 100%;
+    border: 1px solid var(--light);
+    background-color: var(--white);
+    overflow-y: auto; /* Add this line to make it scrollable */
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.container .left .top-left {
+    position: relative;
+    width: 100%;
+    height: 96px;
+    padding: 20px;
+}
+
+.container .left .top-left:after {
+    position: absolute;
+    top: 118%;
+    left: 50%;
+    display: block;
+    width: 80%;
+    height: 1px;
+    content: '';
+    background-color: var(--light);
+    transform: translate(-50%, 0);
+}
+
+.container .left input {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    height: 40px;
+    padding: 0 15px;
+    border: 1px solid var(--light);
+    background-color: #eceff1;
+    border-radius: 21px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+
+.container .left input:focus {
+    outline: none;
+}
+
+.container .left a.search {
+    display: block;
+    float: left;
+    width: 42px;
+    height: 42px;
+    margin-left: 10px;
+    border: 1px solid var(--light);
+    border-radius: 50%;
+}
+
+.container .left .people {
+    list-style: none;
+    margin-left: -1px;
+    width: calc(100% + 2px);
+}
+
+.people{
+    margin-top: 20px;
+}
+
+.container .left .people .person {
+    position: relative;
+    width: 100%;
+    padding: 12px 10% 16px;
+    cursor: pointer;
+    background-color: var(--white);
+    display: -webkit-box
+}
+
+
+.container .left .people .person div {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.container .left .people .person .name{
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--dark);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+}
+
+.container .left .people .person .time {
+    font-size: 14px;
+    position: absolute;
+    top: 48px;
+    right: 10%;
+    padding: 0 0 5px 5px;
+    color: var(--grey);
+}
+
+.user_name, .product_name{
+    position: relative;
+    display: block;
+    margin-left: 12px;
+    margin-top: 2%;
+}
+
+.container .left .people .person .preview {
+    position: absolute;
+    font-size: 14px;
+    display: inline-block;
+    overflow: hidden !important;
+    width: 70%;
+    left: 24%;
+    top: 45px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: var(--grey);
+}
+
+.container .left .people .person.active,
+.container .left .people .person:hover {
+    margin-top: -1px;
+    margin-left: -1px;
+    padding-top: 13px;
+    border: 0;
+    background-color: var(--blue);
+    width: calc(100% + 2px);
+    padding-left: calc(10% + 1px);
+}
+
+.container .left .people .person.active span,
+.container .left .people .person:hover span {
+    color: var(--white);
+    background: transparent;
+}
+
+.container .left .people .person.active:after,
+.container .left .people .person:hover:after {
+    display: none; 
+}
+
+.container .right {
+    position: relative;
+    float: left;
+    width: 62.4%;
+    height: 100%;
+}
+
+.container .right .top {
+    width: 100%;
+    height: 50px;
+    padding: 15px 29px;
+    background-color: #eceff1;
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.container .right .top span {
+    font-size: 15px;
+    color: var(--grey);
+}
+
+.container .right .top span .name {
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.container .right .message {
+    position: relative;
+    display: none;
+    overflow-y: auto; /* Make the .message section scrollable */
+    padding: 0 35px 22px;
+    border-width: 1px 1px 1px 0;
+    border-style: solid;
+    border-color: var(--light);
+    height: calc(100% - 120px);
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.container .right .message.active-chat {
+    display: block;
+}
+
+.container .right .message.active-chat .bubble {
+    transition-timing-function: cubic-bezier(.4,-.04, 1, 1);
+}
+
+.container .right .write {
+    position: absolute;
+    padding: 0px 10px 0px 10px;
+    bottom: 20px;
+    left: 75px;
+    height: 42px;
+    border: 1px solid var(--light);
+    background-color: #eceff1;
+    width: calc(100% - 128px);
+    border-radius: 5px;
+}
+
+.container .right .write input {
+    font-size: 16px;
+    width: -webkit-fill-available;
+    height: 40px;
+    padding: 0 10px;
+    color: var(--dark);
+    border: 0;
+    outline: none;
+    background-color: #eceff1;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+
+.container .right .bubble {
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+    clear: both;
+    margin-bottom: 8px;
+    padding: 13px 14px;
+    vertical-align: top;
+    border-radius: 5px;
+}
+
+.container .right .bubble:before {
+    position: absolute;
+    top: 19px;
+    display: block;
+    width: 8px;
+    height: 6px;
+    content: '\00a0';
+    transform: rotate(29deg) skew(-35deg);
+}
+
+.container .right .bubble.you {
+    float: left;
+    color: var(--white);
+    background-color: var(--blue);
+    align-self: flex-start;
+    animation-name: slideFromLeft;
+    margin-top: 10px;
+    position: relative; /* Ensures positioning for the next element */
+}
+
+.container .right .read-status {
+    clear: both; /* Ensures it doesn't float and appears under the bubble */
+    margin-top: 5px; /* Adjust spacing between bubble and read status */
+    color: var(--gray); /* Optional color for read status */
+    font-size: 12px; /* Optional font size */
+    float: right;
+}
+
+
+.container .right .bubble.you:before {
+    left: -3px;
+    background-color: var(--blue);
+}
+
+.container .right .bubble.me {
+    float: right;
+    color: var(--dark);
+    background-color: #eceff1;
+    align-self: flex-end;
+    animation-name: slideFromRight;
+    margin-top: 10px;
+}
+
+.container .right .bubble.me:before {
+    right: -3px;
+    background-color: #eceff1;
+}
+
+.container .right .conversation-start {
+    position: relative;
+    width: 100%;
+    margin-bottom: 27px;
+    text-align: center;
+}
+
+.container .right .conversation-start span {
+    display: inline-block;
+    font-size: 14px;
+    color: var(--grey);
+}
+
+.container .right .conversation-start span:before,
+.container .right .conversation-start span:after {
+    position: absolute;
+    top: 10px;
+    display: inline-block;
+    width: 30%;
+    height: 1px;
+    content: '';
+    background-color: var(--light);
+}
+
+.container .right .conversation-start span:before {
+    left: 0;
+}
+
+.container .right .conversation-start span:after {
+    right: 0;
+}
+
+.send{
+    position: absolute;
+    display: inline-flex;
+    float: right;
+    border: 0;
+    background-color: transparent;
+    margin-left: 20px;
+    font-size: 25px;
+    color: #2D4A36;
+    cursor: pointer;
+    top: 8px;
+}
+
+.attachment{
+    position: absolute;
+    display: flex;
+    font-size: 25px;
+    margin-left: -60px;
+    gap: 15px;
+    margin-top: 3px;
+}
+
+.bi-image, .bi-tag{
+    cursor: pointer;
+}
+
+.send-image{
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+}
+
+.inquiry-image {
+    width: 230px; /* Responsive sizing */
+    height: 120px;    /* Maintain aspect ratio */
+    object-fit: cover;
+    display: block;  /* Ensures the image appears on a new line */
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 5px; /* Space between the image and message text */
+}
+
+.price{
+    margin-bottom: 10px;
+}
+
+@keyframes slideFromLeft {
+    0% {
+        margin-left: -200px;
+        opacity: 0;
+    }
+    100% {
+        margin-left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        margin-right: -200px;
+        opacity: 0;
+    }
+    100% {
+        margin-right: 0;
+        opacity: 1;
+    }
+}
+
+ul.nav-tabs {
+    position: absolute;
+    list-style-type: none; /* Removes bullets */
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+ul.nav-tabs .nav-item {
+    display: inline; /* Makes the tabs appear in a horizontal line */
+    position: relative; /* Ensures tooltips are positioned relative to the nav-item */
+}
+
+ul.nav-tabs .nav-link {
+    text-decoration: none; /* Removes the underline */
+    padding: 5px 20px;    /* Adjust padding as needed */
+    cursor: pointer;       /* Makes the link look clickable */
+    color: black;
+    background-color: transparent; /* Default background is transparent */
+    border-radius: 50px;
+    transition: background-color 0.3s; /* Smooth transition effect */
+}
+
+ul.nav-tabs .nav-link.active {
+    background-color: #2D4A36; /* Active tab background color */
+    color: white;
+}
+
+ul.nav-tabs .nav-item:hover .nav-link {
+    background-color: rgba(45, 74, 54, 0.1); /* Adds a subtle hover effect */
+    color: black;
+}
+
+ul.nav-tabs .nav-item::after {
+    content: attr(data-tooltip); /* Use the `data-tooltip` attribute for tooltip text */
+    position: absolute;
+    top: -35px; /* Adjust to position the tooltip below the tab */
+    left: 80%;
+    transform: translateX(-50%);
+    background-color: #2D4A36;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10;
+}
+
+ul.nav-tabs .nav-item:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.bubble .action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.bubble .accept-button{
+    width: 100%;
+    height: 40px;
+    background-color: #72C268;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.bubble .reject-button{
+    width: 100%;
+    height: 40px;
+    background-color: red;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.product-profile{
+    display: flex;
+    object-fit: cover;
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%;
+}
+
+.bubble .offer-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    font-size: 18px;
+    height: 40px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.bubble .offer-status.pending {
+    background-color: #72C268; /* Pending status */
+}
+
+.bubble .offer-status.accepted {
+    background-color: green; /* Accepted status */
+}
+
+.bubble .offer-status.rejected {
+    background-color: red; /* Rejected status */
+}
+
+.offer-status::first-letter {
+    text-transform: uppercase !important; /* Capitalizes the first letter */
+}
+
+/* Styles for the rate seller button */
+.rate-seller-button-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    height: 40px;
+    width: 100%;
+    border: none;
+    background-color: #2D4A36; /* Dark green for messages from the current user */
+    color: white; /* White text color */
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5px; /* Add space above the button */
+}
+
+.rate-seller-button-you {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    height: 40px;
+    width: 100%;
+    background-color: #72C268; /* Light green for messages from the other user */
+    color: black; /* Default text color */
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5px; /* Add space above the button */
+}
+
+.rate-seller-button-me:hover {
+    background-color: #4CAF50; /* Darker green on hover for current user */
+}
+
+.rate-seller-button-you:hover {
+    background-color: #5cbf2a; /* Darker light green on hover for the other user */
+}
+
+.chat-close{
+    display: none;
+}
+
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.image-modal .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    top: 20%;
+}
+
+.image-modal .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.image-modal .close:hover,
+.image-modal .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.rated-message{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    font-size: 18px;
+    height: 40px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    background-color: green;
+}
+
+@media screen and (max-width: 814px) {
+    
+    .chat-close {
+        display: block;
+        font-size: 28px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 17px;
+        position: fixed;
+        z-index: 1001;
+    }
+    
+    .right .top{
+        display: flex;
+        background-color: white !important;
+        border-bottom: 1px solid #2D4A36;
+        position: relative;
+        top: 5px;
+        left: 0;
+        padding-left: 20px;
+        font-size: 30px;
+        height: 55px !important;
+        z-index: 1000; /* Ensure it stays on top of other elements */
+        padding-left: 45px !important;
+    }
+    
+    .message{
+        position: absolute;
+        margin-top: 79px;
+    }
+    
+    .container{
+        left: 46.5%;
+        padding: 0;
+        height: 100%;
+        margin-top: 40px;
+    }
+    
+    .person{
+        padding: 10px;
+        margin-left: -10px;
+    }
+    
+    .nav-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        border-bottom: 1px solid #2D4A36;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        padding: 10px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    .nav-container .user-name {
+        display: none;
+    }
+    
+    .profile-con {
+        margin-left: auto;
+        margin-right: -35px;
+        margin-top: 5px;
+    }
+    
+    ul.nav-tabs{
+        display: flex;
+        margin-top: 10px;
+    }
+    
+    .wrapper {
+    position: fixed;
+        left: 53.5%;
+        width: 100%;
+        height: 100%;
+        transform: translate(-50%, 0);
+        margin-top: 35px;
+}
+    
+    .tab-content, .tab-pane{
+        width: 100%;
+    }
+    
+    .container{
+        top: 47% !important;
+    }
+    
+    .container .left .people {
+    list-style: none;
+    margin-left: -1px;
+    width: 100%;
+}
+    
+    .container .right {
+        display: block;
+       position: relative;
+        width: 100% !important;
+        overflow-y: auto;
+        margin-top: -54px;
+        float: none;
+        height: 100%;
+    }
+    
+    .container .left{
+        width: 100%;
+        padding-top: 20px;
+        margin-bottom: 50px;
+        border: none;
+        height: 100vh;
+        padding-bottom: 200px;
+    }
+    .preview {
+        margin-left: 22px;
+        margin-top: 2px;
+    }
+    .container .right .write {
+        position: fixed;
+    }
+    
+    .container .right .message {
+        border: none;
+        height: calc(100% - 130px) !important;
+        margin-top: 5px;
+        border-bottom: 1px solid #2D4A36;
+    }
+    
+    .top-left{
+        margin-top: -10px;
+    }
+}
+
+/* Ensure the body padding is removed when modal is open */
+body.modal-open {
+    padding-right: 0 !important;
+  }
+
+/* Modal Container */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+  
+  .modal.show {
+    display: block;
+  }
+
+  /* Modal Dialog */
+  .modal-dialog {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    margin: auto;
+  }
+  
+  .modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1.75rem);
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    outline: 0;
+  }
+  
+  /* Modal Header */
+  .modal-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 20px;
+  }
+  
+  .modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+   /* Close Button */
+.btn-close {
+    padding: 0;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  
+  /* Optional: Add some spacing around the close button if needed */
+  .btn-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background-color: lightgray;
+    border-radius: 50%;
+    line-height: 1;
+  }
+
+   /* Modal Footer */
+   .modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-top: 1px solid #dee2e6;
+  }
+  
+  /* Transition Effects */
+  .modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+    transform: translateY(-50px);
+  }
+  
+  .modal.fade.show .modal-dialog {
+    transform: translateY(0);
+  }
+
+  .star-rating {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.star {
+    font-size: 40px; /* Adjust size as needed */
+    color: gray; /* Default color */
+}
+
+.star.selected,
+.star:hover {
+    color: gold; /* Color for selected or hovered stars */
+}
+
+.rating-label{
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+}
+
+#review{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 95%;
+    height: 120px;
+    padding: 10px;
+}
+
+.seller-rate-btn, .agreed-btn{
+    height: 40px;
+    width: 100%;
+    background-color: #2D4A36;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.seller-rate-btn:hover{
+    background-color: #a2bc62;
+}
+
+/* Default styling for active or hovered .person items */
+.container .left .people .person.active span,
+.container .left .people .person:hover span {
+    color: var(--white);
+    background: transparent;
+}
+
+/* Unread chat styling */
+.container .left .people .person.unread span {
+    font-weight: bold;   /* Make the font bold */
+}
+
+/* Unread chat styling */
+.container .left .people .person.unread .preview {
+    color: black;   /* Make the font bold */
+}
+
+/* Ensure color change on hover if unread */
+.container .left .people .person.unread:hover span {
+    color: var(--white); /* Keep text white on hover */
+}
+
+.form-group{
+    display: grid;
+    width: 95%;
+    margin: 10px;
+}
+
+.form-group .agreed{
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input{
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 0.5px solid black;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.hidden-input {
+    display: none; /* Hide the file input */
+}
+.upload-icon {
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.unread-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    margin-left: 5px;
+    position: relative;
+    top: -2px;
+}
+
+.dropdown-btn{
+    display: flex;
+}
+
+.profile-action {
+    margin-right: 5px;
+}
+
+.profile-action{
+    color: #2D4A36 !important;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+/* Responsive Adjustments for Mobile Screens */
+@media screen and (max-width: 768px) {
+.sidebar {
+  display: none;
+}
+
+/**for nav container**/
+.nav-container .user-name {
+  display: none;  /* Hide the username on mobile */
+}
+
+.nav-container {
+  position: fixed;        
+  top: 0;                  
+  left: 0;               
+  width: 100%;            
+  background-color: white; 
+  border-bottom: 1px solid #2D4A36; 
+  display: flex;           
+  justify-content: space-between; 
+  align-items: center;     
+  height: 60px;            
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  z-index: 1000;          
+  padding: 0 10px;        
+  margin: 0;              
+  box-sizing: border-box;  
+}
+
+.nav-container h2 {
+  font-size: 20px;  
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+/**home**/
+.label {
+  margin-top: 80px;      
+  padding: 15px 0px;     
+  margin-left: -40px;    
+  text-align: left;     
+  width: 100%;           
+}
+  
+.label h3 {
+  font-size: 18px;       
+  color: #2D4A36;        
+  margin: 0;             
+}
+
+
+/* Create a new bottom navigation bar */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid #2D4A36;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.bottom-nav .nav-icon {
+  width: 30px;
+  height: 30px;
+  color: #2D4A36;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Adjust icons or links inside the bottom nav */
+.bottom-nav .nav-icon:hover {
+  color: #F9BF29;
+}
+
+/* Style for bottom-nav */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid #2D4A36;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 60px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.bottom-nav .nav-link.active {
+border-top: 3px solid #2D4A36;
+  color: #FFFFFF; /* Text color for active link */
+  font-weight: bold; /* Optional: Make active link bold */
+}
+
+/* Change the icon color to white when active in bottom-nav */
+.bottom-nav .nav-link.active .icon {
+  color: #2D4A36; /* Icon color for active link */
+}
+
+/* Ensure span text inside nav-link is also white when active in bottom-nav */
+.bottom-nav .nav-link.active .nav-text {
+  color: #2D4A36; /* Span text color for active link */
+}
+
+/* Style for the container of nav links */
+.nav-links {
+  display: flex;
+  justify-content: space-evenly; 
+  width: 100%; 
+  padding: 0 10px; 
+}
+
+/* Style for each nav link */
+.nav-link {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;     
+  padding: 0 10px;
+  text-align: center;
+  height: 100%; 
+  width: 100%; 
+  text-decoration: none; 
+  margin-top: 5px;
+}
+
+/* Style for icons inside nav links */
+.icon {
+    margin-top: 2px;
+margin-bottom: -6px;
+  font-size: 20px;
+  color: #2D4A36;
+}
+
+/* Hover effect for icons */
+.nav-link:hover .icon {
+  color: #F9BF29;
+}
+
+/* Style for the text under the icon */
+.nav-text {
+  font-size: 10px; 
+  color: #2D4A36; 
+  margin-top: 8px;
+  padding-bottom: 5px;
+  text-decoration: none; 
+}
+
+/* Optional: Change the text color when hovering over the nav link */
+.nav-link:hover .nav-text {
+  color: #F9BF29;
+}
+
+/* Adjust spacing between last nav link and logout */
+.nav-link:last-child {
+  margin-right: 0; 
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+  display: none; 
+  position: absolute;
+  top: 60px; 
+  right: 10px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #2D4A36;
+  border-radius: 5px;
+  z-index: 1000;
+  padding: 10px;
+  width: 200px; 
+  text-align: left;
+}
+
+/* Dropdown menu hidden by default */
+.dropdown-menu {
+  display: none; 
+  position: absolute;
+  top: 60px; 
+  right: 10px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #2D4A36;
+  border-radius: 5px;
+  z-index: 1000;
+  padding: 10px;
+  width: 200px; 
+  text-align: left;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Dropdown menu visible */
+.dropdown-menu.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dropdown menu items */
+
+.dropdown-menu .user-name {
+  display: block; 
+  font-size: 16px; 
+  color: #2D4A36; 
+  margin-bottom: 10px;
+  text-align: center; 
+}
+
+.home #logout-link {
+  display: flex;
+  align-items: center; 
+  text-decoration: none; 
+  color: #2D4A36; 
+  font-size: 16px; 
+  margin-top: 10px; 
+}
+
+
+.home #logout-link .bx {
+  font-size: 18px; 
+  margin-left: 16px; 
+  margin-top: 10px;
+}
+
+.home #logout-link span {
+  color: #2D4A36; 
+  font-size: 16px; 
+  margin-left: -50px; 
+  margin-top: 10px;
+}
+
+.home #logout-link:hover {
+  color: #F9BF29; 
+  text-decoration: none; 
+}
+
+.home #logout-link:hover .bx {
+  color: #F9BF29; 
+}
+
+.home #logout-link:hover span {
+  color: #F9BF29; 
+}
+
+/* Style for submenu container */
+.mobile-submenu-container {
+  display: none; /* Hide by default */
+  background-color: white;
+  position: absolute;
+  bottom: 60px; 
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 10px;
+}
+
+/* Show the submenu when the 'show' class is added */
+.mobile-submenu-container.show {
+  display: block;
+}
+
+/* Specific styles for submenu links */
+.mobile-submenu-container .submenu-nav-link {
+  display: flex; 
+  align-items: center; 
+  justify-content: flex-start; 
+  padding: 10px; 
+  color: #2D4A36; 
+  text-decoration: none;
+  border-bottom: 1px solid #e0e0e0;
+  width: 100%; 
+}
+
+/* Hover effect for submenu links */
+.mobile-submenu-container .submenu-nav-link:hover {
+  color: #F9BF29;
+}
+
+/* Style for span to align with icon */
+.mobile-submenu-container .submenu-nav-link span {
+  margin-left: 10px; 
+  font-size: 16px;
+  color: inherit; 
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.mobile-submenu-container .submenu-nav-link:hover {
+  background-color: #2D4A36; /* Dark background on hover */
+  color: #FFFFFF; /* White text and icon on hover */
+  border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+.mobile-submenu-container .submenu-nav-link:hover .icon,
+.mobile-submenu-container .submenu-nav-link:hover span {
+  color: #FFFFFF; /* Ensure both icon and text are white */
+}
+
+/* Active state for submenu links */
+.mobile-submenu-container .submenu-nav-link.active {
+  background-color: #2D4A36; /* Dark green for active background */
+  color: #FFFFFF; /* White text and icon for active state */
+  font-weight: bold; /* Optional: Bold active text */
+  border-radius: 5px; /* Optional: Add rounded corners for active state */
+}
+
+.mobile-submenu-container .submenu-nav-link.active .icon,
+.mobile-submenu-container .submenu-nav-link.active span {
+  color: #FFFFFF; /* Ensure both icon and text are white in active state */
+}
+
+/* Adjust icon size and spacing */
+.mobile-submenu-container .submenu-nav-link .icon {
+  font-size: 18px; /* Adjust the size of the icon */
+  vertical-align: middle; /* Align the icon vertically with the text */
+  margin-right: 10px; /* Space between icon and text */
+  margin-bottom: 10px;
+}
+
+.product-container {
+  display: grid; /* Use grid layout for proper alignment */
+  grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
+  gap: 10px; /* Space between rows and columns */
+  padding-left: 0; /* Adjust padding for smaller screens */
+  justify-content: space-between;
+  margin-left: -70px;
+  width: fit-content;
+}
+
+.product-card{
+  display: flex;
+  width: 190px;
+  height: 280px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-img-top{
+  object-fit: cover;
+  width: 190px;
+  height: 150px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-body{
+  position: absolute;
+  display: inline;
+  padding-left: 8px;
+}
+
+.product-price{
+  font-size: 20px;
+  margin-top: 170px;
+}
+
+.product-location{
+  font-size: 14px;
+}
+
+.favorite{
+    position: absolute;
+    display: flex;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 210px;
+    top: 92%;
+}
+
+}
+
+/* for larger screens, the bottom nav can be hidden */
+@media screen and (min-width: 769px) {
+.bottom-nav {
+  display: none;
+}
+
+.dropdown-menu {
+  display: none; 
+}
+
+.mobile-submenu-container {
+  display: none; 
+}
+}
+

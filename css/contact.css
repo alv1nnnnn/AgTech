@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bahnschrift', sans-serif;
+    overflow-x: hidden;
+}
+
+.section {
+    padding: 60px 20px;
+    min-height: 100vh;
+    position: relative; 
+    margin-top: 60px;
+    object-fit: cover;
+}
+
+.contact{
+    background: url('../images/AgTech-Contact-Background.png') no-repeat center center/cover;
+    position: relative;
+}
+
+.contact-form {
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 550px;
+            height: 550px;
+            margin-left: 50px;
+        }
+        .contact-form h2 {
+            margin-bottom: 15px;
+            font-size: 40px;
+            font-weight: 800;
+            text-align: center;
+            color: #2D4A36;
+            margin-top: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #2D4A36;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+        }
+        .submit-btn:hover {
+            background: green;
+        }

@@ -1,0 +1,32 @@
+Privacy Policy
+Introduction
+AgTech is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and share your personal information.
+
+Information We Collect
+Personal Information: We collect information such as your name, email address, and phone number when you create an account or conduct transactions.
+Usage Data: We collect information about how you use the service, including your interactions with the platform and the content you view.
+
+How We Use Your Information
+Service Provision: To provide, maintain, and improve our services.
+Communication: To communicate with you about your account, transactions, and updates to our services.
+Personalization: To personalize your experience and provide relevant content and recommendations.
+Security: To protect the security and integrity of our services.
+
+Sharing Your Information
+With Your Consent: We may share your information with third parties if you give us your consent.
+Service Providers: We may share your information with third-party service providers who perform services on our behalf.
+Legal Requirements: We may disclose your information if required to do so by law or in response to valid requests by public authorities.
+
+Data Security
+We implement appropriate technical and organizational measures to protect your personal information from unauthorized access, use, or disclosure.
+
+Your Rights
+Access and Correction: You have the right to access and correct your personal information.
+Deletion: You have the right to request the deletion of your personal information.
+Objection: You have the right to object to the processing of your personal information under certain circumstances.
+
+Changes to the Privacy Policy
+We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on our website.
+
+Contact Information
+If you have any questions or concerns about this Privacy Policy, please contact us at <a href="mailto:agtechteam@gmail.com">agtechteam@gmail.com</a>.

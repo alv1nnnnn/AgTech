@@ -1,0 +1,438 @@
+/* Responsive Adjustments for Mobile Screens */
+@media screen and (max-width: 768px) {
+.sidebar {
+  display: none;
+}
+
+/**for nav container**/
+.nav-container .user-name {
+  display: none;  /* Hide the username on mobile */
+}
+
+.nav-container {
+  position: fixed;        
+  top: 0;                  
+  left: 0;               
+  width: 100%;            
+  background-color: white; 
+  border-bottom: 1px solid #2D4A36; 
+  display: flex;           
+  justify-content: space-between; 
+  align-items: center;     
+  height: 60px;            
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  z-index: 1000;          
+  padding: 0 10px;        
+  margin: 0;              
+  box-sizing: border-box;  
+}
+
+.nav-container h2 {
+  font-size: 20px;  
+  margin-left: 20px;
+  margin-top: 10px;
+  color: #2D4A36 !important;
+}
+
+.profile-con {
+  margin-left: auto; 
+  margin-right: -35px;
+  margin-top: 5px;
+}
+
+/**home**/
+.label {
+  margin-top: 80px;      
+  padding: 15px 0px;     
+  margin-left: -40px;    
+  text-align: left;     
+  width: 100%;           
+}
+  
+.label h3 {
+  font-size: 18px;       
+  color: #2D4A36;        
+  margin: 0;             
+}
+
+
+/* Create a new bottom navigation bar */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid #2D4A36;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.bottom-nav .nav-icon {
+  width: 30px;
+  height: 30px;
+  color: #2D4A36;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Adjust icons or links inside the bottom nav */
+.bottom-nav .nav-icon:hover {
+  color: #F9BF29;
+}
+
+/* Style for bottom-nav */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid #2D4A36;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 60px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.bottom-nav .nav-link.active {
+border-top: 3px solid #2D4A36;
+  color: #FFFFFF; /* Text color for active link */
+  font-weight: bold; /* Optional: Make active link bold */
+}
+
+/* Change the icon color to white when active in bottom-nav */
+.bottom-nav .nav-link.active .icon {
+  color: #2D4A36; /* Icon color for active link */
+}
+
+/* Ensure span text inside nav-link is also white when active in bottom-nav */
+.bottom-nav .nav-link.active .nav-text {
+  color: #2D4A36; /* Span text color for active link */
+}
+
+/* Style for the container of nav links */
+.nav-links {
+  display: flex;
+  justify-content: space-evenly; 
+  width: 100%; 
+  padding: 0 10px; 
+}
+
+/* Style for each nav link */
+.nav-link {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;     
+  padding: 0 10px;
+  text-align: center;
+  height: 100%; 
+  width: 100%;
+  text-decoration: none; 
+}
+
+/* Style for icons inside nav links */
+.icon {
+  font-size: 20px;
+  color: #2D4A36;
+}
+
+/* Hover effect for icons */
+.nav-link:hover .icon {
+  color: #F9BF29;
+}
+
+/* Style for the text under the icon */
+.nav-text {
+  font-size: 10px; 
+  color: #2D4A36; 
+  margin-top: 4px; 
+  text-decoration: none; 
+}
+
+/* Optional: Change the text color when hovering over the nav link */
+.nav-link:hover .nav-text {
+  color: #F9BF29;
+}
+
+/* Adjust spacing between last nav link and logout */
+.nav-link:last-child {
+  margin-right: 0; 
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+  display: none; 
+  position: absolute;
+  top: 60px; 
+  right: 10px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #2D4A36;
+  border-radius: 5px;
+  z-index: 1000;
+  padding: 10px;
+  width: 200px; 
+  text-align: left;
+}
+
+/* Dropdown menu hidden by default */
+.dropdown-menu {
+  display: none; 
+  position: absolute;
+  top: 60px; 
+  right: 10px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #2D4A36;
+  border-radius: 5px;
+  z-index: 1000;
+  padding: 10px;
+  width: 200px; 
+  text-align: left;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Dropdown menu visible */
+.dropdown-menu.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dropdown menu items */
+
+.dropdown-menu .user-name {
+  display: block; 
+  font-size: 16px; 
+  color: #2D4A36; 
+  margin-bottom: 10px;
+  text-align: center; 
+}
+
+.home #logout-link {
+  display: flex;
+  align-items: center; 
+  text-decoration: none; 
+  color: #2D4A36; 
+  font-size: 16px; 
+  margin-top: 10px; 
+}
+
+
+.home #logout-link .bx {
+  font-size: 18px; 
+  margin-left: 16px; 
+  margin-top: 10px;
+}
+
+.home #logout-link span {
+  color: #2D4A36; 
+  font-size: 16px; 
+  margin-left: -50px; 
+  margin-top: 10px;
+}
+
+.home #logout-link:hover {
+  color: #F9BF29; 
+  text-decoration: none; 
+}
+
+.home #logout-link:hover .bx {
+  color: #F9BF29; 
+}
+
+.home #logout-link:hover span {
+  color: #F9BF29; 
+}
+
+/* Style for submenu container */
+.mobile-submenu-container {
+  display: none; /* Hide by default */
+  background-color: white;
+  position: absolute;
+  bottom: 60px; 
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 10px;
+}
+
+/* Show the submenu when the 'show' class is added */
+.mobile-submenu-container.show {
+  display: block;
+}
+
+/* Specific styles for submenu links */
+.mobile-submenu-container .submenu-nav-link {
+  display: flex; 
+  align-items: center; 
+  justify-content: flex-start; 
+  padding: 10px; 
+  color: #2D4A36; 
+  text-decoration: none;
+  border-bottom: 1px solid #e0e0e0;
+  width: 100%; 
+}
+
+/* Hover effect for submenu links */
+.mobile-submenu-container .submenu-nav-link:hover {
+  color: #F9BF29;
+}
+
+/* Style for span to align with icon */
+.mobile-submenu-container .submenu-nav-link span {
+  margin-left: 10px; 
+  font-size: 16px;
+  color: inherit; 
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.mobile-submenu-container .submenu-nav-link:hover {
+  background-color: #2D4A36; /* Dark background on hover */
+  color: #FFFFFF; /* White text and icon on hover */
+  border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+.mobile-submenu-container .submenu-nav-link:hover .icon,
+.mobile-submenu-container .submenu-nav-link:hover span {
+  color: #FFFFFF; /* Ensure both icon and text are white */
+}
+
+/* Active state for submenu links */
+.mobile-submenu-container .submenu-nav-link.active {
+  background-color: #2D4A36; /* Dark green for active background */
+  color: #FFFFFF; /* White text and icon for active state */
+  font-weight: bold; /* Optional: Bold active text */
+  border-radius: 5px; /* Optional: Add rounded corners for active state */
+}
+
+.mobile-submenu-container .submenu-nav-link.active .icon,
+.mobile-submenu-container .submenu-nav-link.active span {
+  color: #FFFFFF; /* Ensure both icon and text are white in active state */
+}
+
+/* Adjust icon size and spacing */
+.mobile-submenu-container .submenu-nav-link .icon {
+  font-size: 18px; /* Adjust the size of the icon */
+  vertical-align: middle; /* Align the icon vertically with the text */
+  margin-right: 10px; /* Space between icon and text */
+  margin-bottom: 10px;
+}
+
+.product-container {
+  display: grid; /* Use grid layout for proper alignment */
+  grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
+  gap: 10px; /* Space between rows and columns */
+  padding-left: 0; /* Adjust padding for smaller screens */
+  justify-content: space-between;
+  margin-left: -70px;
+  width: fit-content;
+}
+
+.product-card{
+  display: flex;
+  width: 190px;
+  height: 280px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-img-top{
+  object-fit: cover;
+  width: 190px;
+  height: 150px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-body{
+  position: absolute;
+  display: inline;
+  padding-left: 8px;
+}
+
+.product-price{
+  font-size: 20px;
+  margin-top: 170px;
+}
+
+.product-location{
+  font-size: 14px;
+}
+
+.favorite{
+    position: absolute;
+    display: flex;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 210px;
+    top: 92%;
+}
+
+.main-container{
+    flex-wrap: wrap;
+    margin-top: 80px;
+    margin-left: -270px;
+    margin-right: 0;
+    overflow: hidden;
+}
+
+.nav-container h1 {
+    display: none;
+}
+
+.table-container {
+    padding: 5px !important;
+    width: 90% !important;
+    margin-left: 30px !important;
+}
+
+.table-container th, .table-container td {
+    padding: 5px !important;
+    font-size: 12px;
+}
+
+.search-bar select {
+    height: unset !important;
+}
+
+.search-bar{
+    margin-top: 5px !important;
+    margin-right: 15px;
+    color: #2D4A36;
+}
+}
+
+/* for larger screens, the bottom nav can be hidden */
+@media screen and (min-width: 769px) {
+.bottom-nav {
+  display: none;
+}
+
+.dropdown-menu {
+  display: none; 
+}
+
+.mobile-submenu-container {
+  display: none; 
+}
+}
+

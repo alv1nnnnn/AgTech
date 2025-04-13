@@ -1,0 +1,495 @@
+h1{
+    margin: 20px 40px 0px 40px;
+    color: darkgreen;
+}
+
+.wishlist-container{
+    position: absolute;
+    display: flex;
+    padding: 30px;
+    width: 100%;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  
+  .wishlist-card{
+    display: flex;
+    width: 250px;
+    height: 300px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  
+  .wishlist-img{
+    object-fit: cover;
+    width: 250px;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .wishlist-details{
+    position: absolute;
+    display: inline;
+    padding-left: 8px;
+  }
+
+  .wishlist-product-name{
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .wishlist-category-name{
+    color: #2D4A36;
+  }
+  
+  .wishlist-product-location{
+      font-size: 15px;
+      color: gray;
+  }
+
+  .wishlist-price{
+    font-size: 25px;
+    margin-top: 205px;
+  }
+
+  .remove-wishlist-btn {
+    position: absolute;
+    margin-left: 220px;
+    background-color: #2D4A36;
+    color: white;
+    border: none;
+    border-radius: 0px 0px 0px 10px;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+
+}
+
+.bi-x-circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 20px;
+    z-index: 2000;
+}
+
+/* Responsive Adjustments for Mobile Screens */
+@media screen and (max-width: 768px) {
+.sidebar {
+  display: none;
+}
+
+/**for nav container**/
+.nav-container .user-name {
+  display: none;  /* Hide the username on mobile */
+}
+
+.nav-container {
+  position: fixed;        
+  top: 0;                  
+  left: 0;               
+  width: 100%;            
+  background-color: white; 
+  border-bottom: 1px solid #2D4A36; 
+  display: flex;           
+  justify-content: space-between; 
+  align-items: center;     
+  height: 60px;            
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  z-index: 1000;          
+  padding: 0 10px;        
+  margin: 0;              
+  box-sizing: border-box;  
+}
+
+.nav-container h2 {
+  font-size: 20px;  
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+/**home**/
+.label {
+  margin-top: 80px;      
+  padding: 15px 0px;     
+  margin-left: -40px;    
+  text-align: left;     
+  width: 100%;           
+}
+  
+.label h3 {
+  font-size: 18px;       
+  color: #2D4A36;        
+  margin: 0;             
+}
+
+
+/* Create a new bottom navigation bar */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid #2D4A36;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.bottom-nav .nav-icon {
+  width: 30px;
+  height: 30px;
+  color: #2D4A36;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Adjust icons or links inside the bottom nav */
+.bottom-nav .nav-icon:hover {
+  color: #F9BF29;
+}
+
+/* Style for bottom-nav */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid #2D4A36;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 60px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.bottom-nav .nav-link.active {
+border-top: 3px solid #2D4A36;
+  color: #FFFFFF; /* Text color for active link */
+  font-weight: bold; /* Optional: Make active link bold */
+}
+
+/* Change the icon color to white when active in bottom-nav */
+.bottom-nav .nav-link.active .icon {
+  color: #2D4A36; /* Icon color for active link */
+}
+
+/* Ensure span text inside nav-link is also white when active in bottom-nav */
+.bottom-nav .nav-link.active .nav-text {
+  color: #2D4A36; /* Span text color for active link */
+}
+
+/* Style for the container of nav links */
+.nav-links {
+  display: flex;
+  justify-content: space-evenly; 
+  width: 100%; 
+  padding: 0 10px; 
+}
+
+/* Style for each nav link */
+.nav-link {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;     
+  padding: 0 10px;
+  text-align: center;
+  height: 100%; 
+  width: 100%; 
+  text-decoration: none; 
+}
+
+/* Style for icons inside nav links */
+.icon {
+  font-size: 20px;
+  color: #2D4A36;
+}
+
+/* Hover effect for icons */
+.nav-link:hover .icon {
+  color: #F9BF29;
+}
+
+/* Style for the text under the icon */
+.nav-text {
+  font-size: 10px; 
+  color: #2D4A36; 
+  margin-top: 4px; 
+  text-decoration: none; 
+}
+
+/* Optional: Change the text color when hovering over the nav link */
+.nav-link:hover .nav-text {
+  color: #F9BF29;
+}
+
+/* Adjust spacing between last nav link and logout */
+.nav-link:last-child {
+  margin-right: 0; 
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+  display: none; 
+  position: absolute;
+  top: 60px; 
+  right: 10px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #2D4A36;
+  border-radius: 5px;
+  z-index: 1000;
+  padding: 10px;
+  width: 200px; 
+  text-align: left;
+}
+
+/* Dropdown menu hidden by default */
+.dropdown-menu {
+  display: none; 
+  position: absolute;
+  top: 60px; 
+  right: 10px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #2D4A36;
+  border-radius: 5px;
+  z-index: 1000;
+  padding: 10px;
+  width: 200px; 
+  text-align: left;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Dropdown menu visible */
+.dropdown-menu.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dropdown menu items */
+
+.dropdown-menu .user-name {
+  display: block; 
+  font-size: 16px; 
+  color: #2D4A36; 
+  margin-bottom: 10px;
+  text-align: center; 
+}
+
+.home #logout-link {
+  display: flex;
+  align-items: center; 
+  text-decoration: none; 
+  color: #2D4A36; 
+  font-size: 16px; 
+  margin-top: 10px; 
+}
+
+
+.home #logout-link .bx {
+  font-size: 18px; 
+  margin-left: 16px; 
+  margin-top: 10px;
+}
+
+.home #logout-link span {
+  color: #2D4A36; 
+  font-size: 16px; 
+  margin-left: -50px; 
+  margin-top: 10px;
+}
+
+.home #logout-link:hover {
+  color: #F9BF29; 
+  text-decoration: none; 
+}
+
+.home #logout-link:hover .bx {
+  color: #F9BF29; 
+}
+
+.home #logout-link:hover span {
+  color: #F9BF29; 
+}
+
+/* Style for submenu container */
+.mobile-submenu-container {
+  display: none; /* Hide by default */
+  background-color: white;
+  position: absolute;
+  bottom: 60px; 
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 10px;
+}
+
+/* Show the submenu when the 'show' class is added */
+.mobile-submenu-container.show {
+  display: block;
+}
+
+/* Specific styles for submenu links */
+.mobile-submenu-container .submenu-nav-link {
+  display: flex; 
+  align-items: center; 
+  justify-content: flex-start; 
+  padding: 10px; 
+  color: #2D4A36; 
+  text-decoration: none;
+  border-bottom: 1px solid #e0e0e0;
+  width: 100%; 
+}
+
+/* Hover effect for submenu links */
+.mobile-submenu-container .submenu-nav-link:hover {
+  color: #F9BF29;
+}
+
+/* Style for span to align with icon */
+.mobile-submenu-container .submenu-nav-link span {
+  margin-left: 10px; 
+  font-size: 16px;
+  color: inherit; 
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.mobile-submenu-container .submenu-nav-link:hover {
+  background-color: #2D4A36; /* Dark background on hover */
+  color: #FFFFFF; /* White text and icon on hover */
+  border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+.mobile-submenu-container .submenu-nav-link:hover .icon,
+.mobile-submenu-container .submenu-nav-link:hover span {
+  color: #FFFFFF; /* Ensure both icon and text are white */
+}
+
+/* Active state for submenu links */
+.mobile-submenu-container .submenu-nav-link.active {
+  background-color: #2D4A36; /* Dark green for active background */
+  color: #FFFFFF; /* White text and icon for active state */
+  font-weight: bold; /* Optional: Bold active text */
+  border-radius: 5px; /* Optional: Add rounded corners for active state */
+}
+
+.mobile-submenu-container .submenu-nav-link.active .icon,
+.mobile-submenu-container .submenu-nav-link.active span {
+  color: #FFFFFF; /* Ensure both icon and text are white in active state */
+}
+
+/* Adjust icon size and spacing */
+.mobile-submenu-container .submenu-nav-link .icon {
+  font-size: 18px; /* Adjust the size of the icon */
+  vertical-align: middle; /* Align the icon vertically with the text */
+  margin-right: 10px; /* Space between icon and text */
+  margin-bottom: 10px;
+}
+
+.wishlist-container {
+  display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding-right: 0;
+    padding-bottom: 0;
+    justify-content: space-between;
+    margin-left: -104px;
+    width: fit-content;
+    margin-top: 50px;
+}
+
+.wishlist-card{
+    display: flex;
+  width: 170px;
+  height: 220px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-top: -10px;
+}
+
+.wishlist-img{
+  object-fit: cover;
+  width: 170px;
+  height: 130px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.wishlist-details{
+  position: absolute;
+  display: inline;
+  padding-left: 8px;
+}
+
+.wishlist-price{
+  font-size: 20px;
+  margin-top: 132px;
+}
+
+.wishlist-product-location{
+  font-size: 10px;
+}
+
+.wishlist-product-name{
+    font-weight: 500;
+}
+
+.wishlist-category-name{
+    color: #2D4A36;
+}
+
+.remove-wishlist-btn {
+    margin-left: 140px;
+    background-color: #2D4A36;
+    color: white;
+    border: none;
+    border-radius: 0px 0px 0px 10px;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+}
+
+}
+
+/* for larger screens, the bottom nav can be hidden */
+@media screen and (min-width: 769px) {
+.bottom-nav {
+  display: none;
+}
+
+.dropdown-menu {
+  display: none; 
+}
+
+.mobile-submenu-container {
+  display: none; 
+}
+}
+
